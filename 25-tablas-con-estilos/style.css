@@ -1,0 +1,134 @@
+body{
+    font: 1.2em / 1.5 system-ui;
+    width: clamp(480px, 70%, 1000px);
+    margin-inline: auto;
+}
+
+table{
+    width: 70%;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 1em;
+}
+
+thead{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+tbody, th{
+    font-weight: normal;
+    text-align: center;
+}
+
+tbody, td{
+    text-align: center;
+}
+/* 
+tbody th, tbody td{
+    border-bottom: 1px solid gray;
+} */
+
+tbody > tr:not(:last-of-type) > *{
+    border-bottom: 1px solid gray;
+}
+
+tbody td[title="Yes"]{
+    background-image: url(check-solid-full.svg);
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.boton{
+    font-size: 1em;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    width: 50%;
+    display: block;
+    margin-inline: auto;
+    border-radius: .25em;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+    padding-block: 1em;
+}
+
+.boton:hover{
+    background-color: rgba(255, 0, 0, 0.61);
+}
+
+label{
+    background-color: rgba(255, 0, 0, 0.548);
+    color: white;
+    font-weight: normal;
+    width: 120px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    position: relative;
+    cursor: pointer;
+}
+
+input:checked ~ label::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid red;
+    position: absolute;
+    top: 100%;
+}
+
+input:checked ~ label{
+    background-color: red;
+}
+
+@media screen and (max-width: 599px){
+    tbody th, thead th:first-child{
+        display: none;
+    }
+
+    tr{
+        position: relative;
+        height: 3em;
+    }
+
+    /* tr:is(.number, .watch, .resolution, .video, .price) td::before {
+        content: attr(data-label);
+        background: black;
+        color: white;
+       */
+    }
+    /* tbody > tr:nth-child(odd) > td{
+    border-bottom: 0;
+} */
+    
+
+    tr.watch::before{
+        content: attr(data-label);
+        display: block;
+        position: absolute;
+        background-color: black;
+        color: white;
+        top: 0;
+    }
+
+    label{
+        aspect-ratio: 1.5;
+    }
+
+
+/* @media screen and (min-width: 599px){
+    tbody > tr:nth-child(odd){
+        display: none;
+    }
+} */

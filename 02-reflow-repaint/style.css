@@ -1,0 +1,43 @@
+body {
+    font-family: system-ui;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #fafafa;
+  }
+  
+  .contenedor {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .caja {
+    width: 100px;
+    height: 100px;
+    background: royalblue;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  /* ❌ Provoca reflow: cambia coordenadas de layout */
+  .reflow {
+    animation: moverLeft 2s infinite alternate;
+  }
+  
+  @keyframes moverLeft {
+    from { left: 0; }
+    to { left: 200px; }
+  }
+  
+  /* ✅ Más eficiente: usa transform (no recalcula layout) */
+  .repaint {
+    background: mediumseagreen;
+    animation: moverTransform 2s infinite alternate;
+  }
+  
+  @keyframes moverTransform {
+    from { transform: translateX(0); }
+    to { transform: translateX(200px); }
+  }
+  
+  

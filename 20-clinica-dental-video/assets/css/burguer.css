@@ -1,0 +1,62 @@
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #3f3f3f;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  margin-right: 25px;
+
+}
+
+/* Animación hamburguesa activa */
+.menu-toggle.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE NAVIGATION */
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: flex-start;
+  top: 55px;
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 55px);
+  transform: translateX(-101%);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav li {
+  padding: 15px;
+}
+
+nav li:first-child {
+  margin-top: 50px;
+}
+
+nav li a {
+  font-size: 1rem;
+}
+
+/* Mostrar menú móvil */
+.mobile-nav ul {
+  transform: translateX(0) !important;
+}

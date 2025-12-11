@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        figure{
+            position: relative;
+            max-width: fit-content;
+        }
+        figcaption{
+            position: absolute;
+            background-color: hsl(0 100% 30% / .5);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        .fig-1{
+            position: absolute;
+            max-width: fit-content;
+        }
+
+        .fig-1 figcaption{
+            bottom: 0;
+            padding-block: 2em;
+            background-color: hsl(0 100% 100% / .5);
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, labore vitae? Maxime dicta consequuntur accusamus, error soluta ad sit pariatur explicabo, repellendus, sequi cum molestiae numquam deserunt porro atque facere.</p>
+    <figure>
+        <img src="hotel-room.jpg" alt="Guest room">
+        <figcaption>Cozy Room</figcaption>
+    </figure>
+
+
+    <figure class="fig-1">
+        <img src="hotel-room.jpg" alt="Guest room">
+        <figcaption>Cozy Room</figcaption>
+    </figure>
+</body>
+</html>

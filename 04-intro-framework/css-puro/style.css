@@ -1,0 +1,49 @@
+:root {
+    --color-primario: #2563eb;
+    --espaciado: 1rem;
+    --radio: 8px;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f9fafb;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  .producto {
+    background: white;
+    border-radius: var(--radio);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--espaciado);
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .producto img {
+    width: 100%;
+    border-radius: var(--radio);
+  }
+  
+  .producto h3 {
+    margin: 0.5rem 0;
+  }
+  
+  .precio {
+    font-weight: bold;
+    color: var(--color-primario);
+  }
+  
+  button {
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radio);
+    cursor: pointer;
+  }
+  button:hover {
+    background: #1e40af;
+  }
+  
+  

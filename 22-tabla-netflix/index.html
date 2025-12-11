@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"><input type="radio" id="ads" name="plan" class="visually-hidden"><label for="ads">Standard 
+                    with ads</label> </th>
+                <th scope="col"><input type="radio" id="standard" name="plan" class="visually-hidden"><label for="standard">Standard</label></th>
+                <th scope="col"><input type="radio" id="premium" name="plan" class="visually-hidden"><label for="premium">Premium</label></th>
+            </tr>
+        </thead>
+
+        <tbody>
+             <tr class="price">
+                <td data-label="Monthly price" colspan="4"></td>
+            </tr>
+            <tr>
+                <th scope="row">Monthly price</th>
+                <td data-plan="ads">$6.99</td>
+                <td>$15.49</td>
+                <td>$22.99</td>
+            </tr>
+             <tr class="video">
+                <td data-label="Video" colspan="4"></td>
+            </tr>
+            <tr>
+                <th scope="row">Video quality</th>
+                <td data-plan="ads">Great</td>
+                <td>Great</td>
+                <td>Best</td>
+            </tr>
+             <tr class="resolution">
+                <td data-label="Resolution" colspan="4"></td>
+            </tr>
+            <tr>
+                <th scope="row">Resolution</th>
+                <td data-plan="ads">1080p</td>
+                <td>1080p</td>
+                <td>4K+HDR</td>
+            </tr>
+            <tr class="watch">
+                <td data-label="Watch on your TV, computer, mobile phone and tablet" colspan="4"></td>
+            </tr>
+            <tr>
+                <th scope="row">Watch on your TV, computer, mobile phone and tablet</th>
+                <td title="Yes"><span class="visually-hidden" data-plan="ads">Yes</span></td>
+                <td title="Yes"><span class="visually-hidden" data-plan="standard">Yes</span></td>
+                <td title="Yes"><span class="visually-hidden" data-plan="premium">Yes</span></td>
+            </tr>
+            <tr class="number">
+             <td data-label="Number of devices for downloads" colspan="4"></td>
+             </tr>
+            <tr>
+                <th scope="row">Number of devices for downloads</th>
+                <td data-plan="ads">2</td>
+                <td>2</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="boton">Next</a>
+</body>
+
+</html>

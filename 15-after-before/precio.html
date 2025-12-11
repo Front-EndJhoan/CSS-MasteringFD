@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .d-flex{
+    display: flex;
+    flex-direction: column;
+  }
+
+  del::before {
+  content: "Antes: ";
+  color: #888;
+}
+
+ins{
+    font-weight: 600;
+    text-decoration: none;
+}
+
+  ins::before {
+  content: "Ahora: ";
+}
+ </style>
+</head>
+<body>
+    <h2>Chaqueta</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, impedit at. Labore, tempora ipsam eius dignissimos porro unde repellat quia consequatur quod aut rem id pariatur quae libero. Ducimus, ratione!</p>
+    <p class="d-flex">Precio: <del>105.00</del> <ins>49.99</ins></p>
+</body>
+</html>

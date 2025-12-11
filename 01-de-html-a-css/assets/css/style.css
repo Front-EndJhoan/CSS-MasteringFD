@@ -1,0 +1,132 @@
+/* === Tokens visuales === */
+/*Paleta Jhoan*/
+:root {
+  --color-fondo: #ffeedbff;
+  --color-texto: #4c3b4dff;
+  --color-acento: #61c9a8ff;
+  --color-secundario: #ada8b6ff;
+  --espaciado-base: 1rem;
+  --radio-base: 0.5rem;
+  --sombra: 0 2px 8px rgba(0,0,0,0.08);
+  --fuente-base: system-ui, sans-serif;
+}
+
+/* === Modo oscuro automático
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #121212;
+    --color-texto: #eaeaea;
+    --color-acento: #4da3ff;
+    --color-secundario: #1e1e1e;
+    --sombra: 0 2px 8px rgba(255,255,255,0.06);
+  }
+} === */
+
+/* === Reset y estilos base === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* === Container central === */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === Header y navegación === */
+.site-header {
+  background: var(--color-secundario);
+  box-shadow: var(--sombra);
+  padding: var(--espaciado-base) 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--color-acento);
+}
+
+/* === Hero principal === */
+.hero {
+  padding: calc(var(--espaciado-base) * 5) 0;
+  text-align: center;
+}
+/* === Aplicación de variable de color ===*/
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: var(--espaciado-base);
+  color: var(--color-secundario);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Sección servicios === */
+.servicios {
+  padding: calc(var(--espaciado-base) * 4) 0;
+}
+
+h2{
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--espaciado-base);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: calc(var(--espaciado-base) * 2);
+}
+
+.card {
+  background: var(--color-secundario);
+  border-radius: var(--radio-base);
+  padding: var(--espaciado-base);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* === Footer, Aplicación de variable a background === */
+footer {
+  text-align: center;
+  padding: var(--espaciado-base);
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  opacity: 0.8;
+  background-color: var(--color-secundario);
+}

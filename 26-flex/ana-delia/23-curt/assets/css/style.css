@@ -1,0 +1,61 @@
+:root {
+  --curt: #03c2d3;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.btn-section {
+  color: var(--curt);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+}
+
+.hero {
+  position: relative;
+}
+.hero .hero-texto {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.hero .hero-texto h2 span {
+  display: block;
+  font-size: 3rem;
+}
+.hero .hero-texto h2 span:first-child {
+  font-weight: 400;
+}
+.hero .hero-texto h2 span:nth-child(2) {
+  font-weight: 600;
+}
+.hero .hero-texto h2 span:last-child {
+  font-weight: 700;
+}
+.hero video {
+  width: 100%;
+  min-height: 50vh;
+  object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .hero {
+    position: absolute;
+  }
+}/*# sourceMappingURL=style.css.map */

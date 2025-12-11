@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+
+    .padre > *{
+        height: 200px;
+    }
+    .colapso .padre{
+        width: 50%;
+        margin-block: 50px;
+        background-color: red;
+    }
+
+    .colapso .primer-hijo{
+        box-sizing: border-box;
+        height: 200px;
+        margin-block: 50px;
+        background-color: purple;
+    }
+
+    .colapso .ultimo-hijo{
+        box-sizing: border-box;
+        height: 200px;
+        margin-bottom: 50px;
+        background-color: green;
+    }
+
+    .padre{
+        width: 50%;
+        margin-block: 50px;
+        background-color: red;
+    }
+
+    .primer-hijo{
+        box-sizing: border-box;
+        height: 200px;
+        margin-block: 50px;
+        background-color: purple;
+    }
+
+    .ultimo-hijo{
+        box-sizing: border-box;
+        height: 200px;
+        margin-bottom: 50px;
+        background-color: green;
+    }
+    #padre-bd{
+        width: 50%;
+        margin-block: 50px;
+        background-color: red;
+        border-block: 3px solid;
+    }
+
+    .primer{
+        box-sizing: border-box;
+        height: 200px;
+        margin-block: 50px;
+        background-color: purple;
+    }
+
+    .ultimo{
+        box-sizing: border-box;
+        height: 200px;
+        margin-bottom: 50px;
+        background-color: green;
+    }
+   </style>
+   
+</head>
+<body>
+
+ <div class="colapso">
+    <h2>Colapsan los márgenes</h2>
+    <div class="primer-hijo">
+     Primer hijo
+    </div>
+
+    <div class="ultimo-hijo">
+    último hijo
+    </div>
+</div>
+
+<h2>Texto del padre</h2>
+<div class="padre">
+    Hola texto padre
+    <div class="primer-hijo">
+     Primer hijo
+    </div>
+
+    <div class="ultimo-hijo">
+    último hijo
+    </div>
+</div>
+
+<h2>Colapsan por bordes</h2>
+<div id="padre-bd">
+    Hola texto padre
+    <div class="primer-hijo">
+     Primer hijo
+    </div>
+
+    <div class="ultimo-hijo">
+    último hijo
+    </div>
+</div>
+</body>
+</html>

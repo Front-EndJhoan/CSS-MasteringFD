@@ -1,0 +1,21 @@
+/* Agregar Font face y linkear */
+
+.hero-texto{
+    position: absolute;
+}
+
+.hero-video{
+    width: 100vw;
+    aspect-ratio: 16/9;
+}
+
+h1, h2, h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* .hero h2:first-child{
+    font-weight: 400;
+} */

@@ -1,0 +1,89 @@
+/* Basic type and text */
+
+body {
+  font: 1.2em / 1.5 system-ui;
+  width: clamp(480px, 70%, 1000px);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+/* Nav menu */
+
+nav ul {
+  display: flex;
+  height: 80px;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+nav li {
+  flex: 1;
+}
+/*--Se añadió display block a los enlaces--*/
+nav a {
+  text-decoration: none;
+  color: black;
+  background-color: yellowgreen;
+  text-align: center;
+  padding: 10px;
+  display: block;
+}
+/*--Se anadió el selector nav a:focus*/
+a:hover, nav a:focus {
+  background-color: goldenrod;
+}
+
+/* Intro and summary */
+#summary, #introduction, footer{
+   padding: 20px; 
+}
+.highlight {
+  margin-top: 0;
+  background-color: darkslategray;
+  color: cornsilk;
+}
+
+#introduction.highlight a, #summary.highlight a{
+    color: yellow;
+}
+.highlight a {
+  color: purple;
+}
+
+h2 + p::first-line{
+    font-weight: bold;
+}
+
+section:not(#summary, #introduction,) h2 + p::first-line{
+    font-weight: bold;
+}
+
+
+
+/* Footer */
+
+footer.highlight {
+  margin-top: 20px;
+  background-color: goldenrod;
+  text-shadow: 1px 1px 1px black;
+}

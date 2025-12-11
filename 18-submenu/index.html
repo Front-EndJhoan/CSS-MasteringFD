@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/68a650b113.js" crossorigin="anonymous"></script>
+    <style>
+
+        nav a{
+            text-decoration: none;
+            color: gray;
+        }
+
+        nav a:hover{
+            color: black;
+        }
+        nav ul{
+            list-style: none;
+            padding-inline: 0;
+        }
+
+        nav > ul{
+            display: flex;
+            gap: 2rem;
+        }
+
+        .dropdown ul{
+            position: absolute;
+            display: none;
+            transition: 0.3s;
+            background-color: rgb(163, 163, 163);
+        }
+
+        .dropdown ul a{
+            display: block;
+            padding-block: 5px;
+            padding-inline: 10px;
+        }
+
+        .dropdown:hover ul{
+            display: block;
+        }
+
+        nav > ul > li >a::after{
+            content: "";
+            display: block;
+            height: .25em;
+            width: 100%;
+            background-color: blue;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: .3s;
+
+        }
+
+        nav > ul > li >a:hover::after{
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="gallery.html"><span>Gallery <i class="fa-solid fa-caret-down"></i></span></a>
+            <ul>
+              <li><a href="gallery.html">Nature</a></li>
+              <li><a href="gallery.html">People</a></li>
+              <li><a href="gallery.html">Architecture</a></li>
+              <li><a href="gallery.html">Animals</a></li>
+              <li><a href="gallery.html">Sports</a></li>
+              <li><a href="gallery.html">Travel</a></li>
+            </ul>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <main>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quos odio quam nam facilis. Dolorum necessitatibus aut porro eos modi veritatis iste, dolores dolor adipisci assumenda nobis ipsam voluptas tempore!
+        Quis nihil molestiae nobis in temporibus dolorem repellat recusandae a nulla, praesentium dignissimos soluta obcaecati quisquam excepturi vero aliquid delectus. Similique ratione soluta distinctio corrupti inventore. Beatae unde quod reiciendis.
+        Id, sequi vitae mollitia non necessitatibus eius nostrum quo. Laboriosam itaque, saepe a rerum accusantium quos vitae. Velit fugit, reiciendis temporibus possimus omnis maiores amet eveniet illo sit asperiores sed.
+        Corrupti, perferendis! Aperiam veniam non dignissimos impedit magnam necessitatibus culpa aliquid ducimus, quia error aspernatur nemo deleniti vitae ut? Quidem doloribus deserunt eligendi laboriosam quia consequatur voluptatem labore assumenda mollitia.
+        Vitae aliquam porro perferendis aut doloribus nesciunt! Laboriosam soluta sunt odit accusamus natus at, optio ipsa consequatur odio perferendis porro exercitationem quam illum non consectetur debitis possimus unde reprehenderit ea.
+      </main>
+</body>
+</html>

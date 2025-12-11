@@ -1,0 +1,116 @@
+/* Define aquí las variables globales (modo claro) */
+:root {
+    :root {
+        --color-fondo: #f7f7f7;
+        --color-texto: #222;
+        --color-acento: #0066ff;
+        --color-secundario: #ffffff;
+        --espaciado-base: 1rem;
+        --radio-base: 0.5rem;
+        --sombra: 0 2px 8px rgba(0,0,0,0.08);
+        --fuente-base: system-ui, sans-serif;
+      }
+      
+      /* === Modo oscuro automático === */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-fondo: #121212;
+          --color-texto: #eaeaea;
+          --color-acento: #4da3ff;
+          --color-secundario: #1e1e1e;
+          --sombra: 0 2px 8px rgba(255,255,255,0.06);
+        }
+      }
+ 
+}
+
+/* Estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding: var(--espaciado-base);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 3rem;
+}
+
+h1 {
+  color: var(--color-acento);
+  margin-bottom: var(--espaciado-base);
+}
+
+a {
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin-top:  var(--espaciado-base);
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  background-color: rgb(194, 194, 172);
+  color: var(--color-texto);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(158, 158, 140);
+}
+
+/* Switch para el modo oscuro */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(194, 194, 172);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 1px;
+  top: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: rgb(194, 194, 172);
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.label-text {
+  font-size: 0.9rem;
+}

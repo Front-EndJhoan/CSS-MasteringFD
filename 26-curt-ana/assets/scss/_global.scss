@@ -1,0 +1,35 @@
+:root {
+  --curt: #03c2d3;
+  --text-color: #333;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.btn-section {
+  color: var(--curt);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  text-underline-offset: .5rem;
+}
+.inverted {
+  color: white;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

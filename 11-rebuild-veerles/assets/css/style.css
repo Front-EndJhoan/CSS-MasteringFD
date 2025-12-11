@@ -1,0 +1,174 @@
+:root{
+    --user-x: hsl(263, 20%, 49%);
+    --html: hsl(27, 100%, 50%);
+    --css: hsl(219, 100%, 42%);
+    --logo-note: hsl(0, 0%, 85%);
+}
+/*----Estilos generales----*/
+body{
+   color: var(--color-primary);
+}
+
+a{
+   color: var(--color-primary);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.visually-hidden {
+    position: absolute;  width: 1px;  height: 1px;  padding: 0;  margin: -1px;  overflow: hidden;  clip: rect(0, 0, 0, 0);  white-space: nowrap;  border: 0;}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+@font-face {
+    font-family: 'Cartridge-Regular';
+    src: url("../fonts/Cartridge-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cartridge-Bold';
+    src: url("../fonts/Cartridge-Bold.woff2") format("woff2");
+    font-display: swap;
+}
+
+@media screen {
+    .d-none{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 479px) {
+    .visible-sm {
+        display: initial;
+    }
+    
+}
+
+@media screen and (min-width: 599px) {
+    .visible-md{
+        display: initial;
+    }    
+}
+
+@media screen and (min-width: 799) {
+  .visible-lg{
+    display: initial;
+  }  
+}
+
+/*----Navigation----*/
+
+nav{
+    font-size: 1.5rem;
+    font-size: clamp(1rem, 1vw + 1rem, 1.1rem);
+    font-family: 'Cartridge-Bold';
+}
+
+nav *{
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-size: 1.075em;
+
+}
+
+nav [title="Inicio"], button{
+    height: 2em;
+    aspect-ratio: 1;
+    width: 2em;
+}
+
+nav [title="Inicio"]{
+    background-color: var(--color-secundary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img[alt='Logo']{
+    background-color: var(--logo-note);
+    width: 75%;
+}
+
+nav ul{
+    margin-block: 0;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+nav li{
+    display: flex;
+
+}
+
+nav li a{
+    display: flex;
+    align-items: center;
+    padding-inline: calc(.5em * 2 + 1.075em) .5em;
+    background-size: 1.075em;
+    background-position: .5em center;
+}
+
+nav .user-x a{
+color: var(--user-x);
+background-image: url('../img/icon-user.svg');
+}
+
+nav .user-x a:hover{
+    background-image: url(../img/icon-user.svg);
+    background-color: var(--user-x);
+}
+
+nav .html a{
+    color: var(--html);
+    background-image: url('../img/icon-html.svg');
+    }
+
+nav .html a:hover{
+     background-image: url('../img/icon-html.svg');
+     background-color: var(--html);
+        }
+    
+    
+nav .css a{
+     color: var(--css);
+     background-image: url('../img/icon-css.svg');
+        
+}
+
+nav .css a:hover{
+    background-image: url('../img/icon-css.svg');
+    background-color: var(--css);
+}
+
+ nav .notas a{
+    color: currentColor;
+    background-image: url('../img/icon-notes.svg');
+    }
+
+nav .notas a:hover{
+    background-color: var(--logo-note);
+    background-image: url('../img/icon-notes.svg');
+}
+
+nav li:not(.notas) a:hover{
+    color: currentColor;
+}
+
+nav button{
+    background-image: url('../img/icon-search.svg');
+    background-color: transparent;
+    border: 0 none;
+    margin-inline-start: auto;
+    background-position: center;
+}
+
+

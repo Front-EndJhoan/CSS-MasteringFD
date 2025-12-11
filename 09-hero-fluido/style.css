@@ -1,0 +1,154 @@
+ /* =========================================================
+   🎨 PRÁCTICA – Hero fluido
+   Objetivo: aplicar variables (tokens), modo oscuro, medidas 
+   fluidas y principios básicos de diseño coherente.
+   ========================================================= */
+   
+   
+/* ========================
+   🎯 VARIABLES (TOKENS)
+   Define variables para:
+   - color de fondo
+   - color de texto
+   - color destacado (acento)
+   - anchura máxima del contenedor
+   ======================== */
+  
+   /* ========================
+  🌙 MODO OSCURO AUTOMÁTICO
+  Sobrescribe las variables cuando el usuario
+  tenga activado el modo oscuro en el sistema.
+  ======================== */
+  
+  /* =========================================================
+  🧱 ESTRUCTURA GLOBAL
+  ========================================================= */
+   /* -------------------------
+  BODY
+  - Usa una tipografía del sistema (system-ui) font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  - Aplica color de fondo y color de texto
+
+  ------------------------- */
+
+ /* -------------------------
+  CABECERA
+    - Padding vertical de 1rem
+  - Texto centrado horizontalmente
+  - Tamaño de fuente 
+  - Color de texto destacado    
+  ------------------------- */
+    
+ /* -------------------------
+  CONTENEDOR PRINCIPAL
+    - Anchura del 90%
+  - Máximo ancho definido por variable
+  - Centrado horizontal
+  ------------------------- */
+   
+  /* =========================================================
+  🦸‍♀️ SECCIÓN HERO
+  ========================================================= */
+   
+/* -------------------------
+  SECCIÓN HERO
+  - Padding fluido: mínimo 1rem, preferido 5vw, máximo 4rem
+  - Texto centrado
+  ------------------------- */
+
+/* -------------------------
+  TÍTULO DEL HERO
+  - Márgenes 0 excepto inferior (0.5rem)
+  - Tamaño de fuente fluido: min 2rem, pref 5vw, max 4rem
+  - Ajusta interlineado y espaciado entre letras
+  ------------------------- */
+
+/* -------------------------
+  SUBTÍTULO DEL HERO
+  - Anchura máxima para limitar líneas
+  - Centrado horizontal del bloque
+  - Tamaño de fuente fluido: min 1rem, pref 2.5vw, max 1.5rem
+  - Color
+  ------------------------- */    
+  
+  /* -------------------------
+  BOTÓN DE ACCIÓN
+  - Margen superior para separarlo del texto
+  - Color de fondo
+  - color de texto (con contraste alto)
+  - Sin subrayado text-decoration
+  - Bordes redondeados
+  - Padding fluido: más horizontal que vertical
+  - Peso de fuente (grosor) 600 font-weight:
+  ------------------------- */   
+    
+:root{
+    --color-fondo: hsla(43, 57%, 88%, 1);
+    --color-texto: hsla(98, 32%, 45%, 1);
+    --color-destacado: hsla(132, 29%, 31%, 1);
+    --color-btn: hsla(353, 4%, 55%, 1);
+    --ancho-max: 80%vh;
+   }
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.container{
+    margin-inline: auto;
+    padding-inline: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-destacado);
+    max-width: var(--ancho-max);
+}
+
+
+.hero{
+    padding: clamp(1rem, 5vw, 4rem);
+    text-align: center;
+}
+
+#hero-title{
+    margin-bottom: 0.5;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+.hero__subtitle{
+    max-width: 50ch;
+    margin-inline: auto;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--color-destacado)
+}
+
+.hero__cta{
+    display: inline-block;
+    margin-top: 2em;
+    background: var(--color-btn);
+    color: var(--color-fondo);
+    text-decoration: none;
+    border-radius: 25px;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    font-weight: 600px;
+    height: 20px;
+    width: 200px;
+    border: 2px, solid, var(--color-destacado);
+    transition: 0.2s;
+}
+
+.hero__cta:hover{
+    transform: translateY(-5px);
+    filter: brightness(1.5);
+}
+
+/*@media (prefers-color-scheme: dark) {
+    :root {
+        --color-fondo: hsla(126, 42%, 5%, 1);
+        --color-texto: hsla(201, 38%, 84%, 1);
+        --color-destacado: hsla(206, 21%, 27%, 1);
+    }
+  }*/
