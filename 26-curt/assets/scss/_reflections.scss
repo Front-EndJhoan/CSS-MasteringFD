@@ -1,0 +1,64 @@
+@use "mixins" as m;
+
+.reflections{
+    background: url(../img/cropped-big-texture-bg.jpg) no-repeat right top / contain;
+    position: relative;
+    top: -3rem;
+    padding-top: 3em;
+    text-align: center;
+     @include m.from(lg) {
+       
+  }
+  article{
+    position: relative;
+    width: 75%;
+    margin-inline: auto;
+    aspect-ratio: 1;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #FFF;
+    box-shadow: 0 6px 15px 0 rgba(0,0,0,0.21);
+    
+    img{
+        height: 55%;
+        object-fit: cover;
+    }
+    h3{
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cat{
+        position: absolute;
+        background-color: var(--curt);
+        color: white;
+        background-repeat: no-repeat;
+        background-position: .75em center;
+        background-size: 1em auto;
+        padding-left: .75em + 1em + .75em;
+        padding-right: .75em;
+        padding-block: .5em;
+        z-index: 999;
+        top: calc(55% - 1em);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 1em;
+        font-size: .75em;
+
+        &--observe{
+            background-image: url(../img/observe.svg);
+        }
+        &--listen{
+            background-image: url(../img/listen.svg);
+        }
+ 
+  }
+}
+
+
+
+//   @include m.from(xl) {
+   
+//   }
+}

@@ -9,6 +9,10 @@ body {
   font-style: normal;
   color: var(--text-color);
 }
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
 
 h1,
 h2,
@@ -18,16 +22,25 @@ h3 {
   font-weight: 800;
   font-style: normal;
 }
+h2:not(.hero h2){
+   color: var(--curt);
+}
+h2{
+ font-size: 3.5rem;
+}
+
 .btn-section {
   color: var(--curt);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 1rem;
+  text-decoration: underline;
   text-underline-offset: .5rem;
 }
 .inverted {
-  color: white;
+  color: white!important;
 }
+
 img{
   max-width: 100%;
   height: auto;

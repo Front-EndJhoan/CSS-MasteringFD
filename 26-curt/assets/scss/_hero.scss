@@ -4,9 +4,9 @@
   position: relative;
    @include m.from(lg) {
        z-index: 99;
-  }
+  
 
-  .hero-texto {
+   &-texto {
     position: absolute;
     color: white;
     font-size: 1.5rem;
@@ -17,6 +17,7 @@
         position: initial;
         color: var(--text-color);
         translate: initial;
+    }
     }
     h2 {
       span {

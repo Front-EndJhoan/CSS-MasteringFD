@@ -1,0 +1,35 @@
+@use "mixins" as m;
+
+.about {
+  background: var(--curt) url(../img/bg-about.jpg) no-repeat right bottom;
+  position: relative;
+  top: -3rem;
+  z-index: 70;
+  @include m.from(lg) {
+  }
+  &-texto {
+    padding-top: 3rem;
+    @include m.from(md) {
+      padding-block: 6rem;
+    }
+  }
+  .logos {
+    img {
+      max-width: 107px;
+      padding: 0.5rem;
+      opacity: 0.5;
+    }
+  }
+
+  [alt="Dr Curt"] {
+    position: relative;
+    top: 3rem;
+    @include m.from(md) {
+      top: 6rem;
+    }
+  }
+}
+
+//   @include m.from(xl) {
+
+//   }

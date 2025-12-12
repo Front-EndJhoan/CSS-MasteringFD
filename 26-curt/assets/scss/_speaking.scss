@@ -1,0 +1,59 @@
+@use "mixins" as m;
+
+.speaking {
+    h2{
+        @include m.from(lg){
+        margin-top: -300px;
+        color: white !important;
+     }  
+    }
+    
+    .wrapper{
+        position: relative;
+        z-index: 9999;
+    }
+    }
+    .event{
+        box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.21);
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        background: rgb(230, 230, 230);
+    time{
+        background: rgb(255, 255, 255);
+        padding: 1em;
+        border-radius: inherit;
+    }
+        
+    &-month{
+        font-family: "Montserrat", sans-serif;
+        color: #03c2d3;
+        font-size: 2em;
+        font-weight: 800;
+        // line-height: 20px;
+        text-transform: uppercase;
+    }
+    }
+    &-day{
+        font-size: 3em;
+        
+    }
+
+   
+
+    &-details{
+        h3{
+            text-align: center;
+        }
+    
+        p{
+
+        }
+
+        .img{
+            width: 100%;
+            height: auto;
+        }
+
+}
+
