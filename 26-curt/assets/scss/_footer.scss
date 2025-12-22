@@ -1,0 +1,70 @@
+@use "mixins" as m;
+
+footer {  
+ background: #f2f2f2;
+ font-weight: 600;
+//  .grid-3-cols-md{
+//     @include m.from(md) {
+//      grid-template-columns: repeat(3, 1fr);
+//   }
+   
+//  }
+    .menu{
+        a{
+            display: block;
+            padding: .5em 1em;
+        }
+    }
+    svg{
+		width: 2em;
+    }
+  
+    button{
+        display: block;
+        background-color: #03c2d3;
+		padding: 10px 20px;
+		border-radius: 10px;
+		color: #fff;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.78px;
+		transition: box-shadow 0.1s ease-in-out;
+        border: 0 none;
+        &:hover{
+            box-shadow: 0 7px 10px -5px rgba(0,0,0,0.22);
+        }
+    }
+    input{
+        background: transparent;
+        width: 100%;
+        display: block;
+        border: 0 none;
+        border-bottom: 2px var(--curt) solid;
+        padding: .25em;
+    
+        &::placeholder {
+        font-weight: bold;
+        color: var(--curt);
+        }
+
+        /* Firefox */
+        &::-moz-placeholder {
+        color: var(--curt);
+        }
+
+        /* Internet Explorer */
+        &:-ms-input-placeholder {
+        color: var(--curt);
+        }
+
+        /* Edge antiguo */
+        &::-ms-input-placeholder {
+        color: var(--curt);
+        }
+    }
+
+}
+
+//   @include m.from(xl) {
+
+//   }

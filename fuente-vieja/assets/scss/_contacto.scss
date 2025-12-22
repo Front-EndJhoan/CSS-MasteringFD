@@ -1,0 +1,162 @@
+@use "mixins" as m;
+
+.contact{
+    background:hsl(42, 39%, 94%);
+    color: var(--oliva);
+    scroll-margin-top: 3em;
+}
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border-radius: 25px;
+    padding: 2em;
+    border: 2px solid var(--oliva);
+    border-radius: 25px;
+    color: var(--oliva);
+}
+
+label, input{
+    color: var(--oliva);
+    height: 30px;
+}
+
+input:focus{
+  background-color: var(--oliva);
+  height: 30px;
+  color: hsl(0, 0%, 100%);
+}
+
+textarea{
+    display: flex;
+    align-items: start;
+    height: 80px;
+}
+
+textarea:focus{
+  background-color: var(--oliva);
+  color: hsl(0, 0%, 100%);
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+  border-color: var(--oliva);
+}
+
+.custom-btn {
+  width: 400px;
+  height: 60px;
+  color: hsl(0, 0%, 100%);;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow: var(--oliva);
+  outline: none;
+  align-items: center;
+}
+
+.custom-btn:hover{
+    color: var(--oliva);
+}
+
+.btn-15 {
+  background: var(--oliva);
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: hsl(42, 39%, 94%);
+   box-shadow: var(--oliva);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding-inline: 3em;
+    padding-top: 1em;
+}
+
+.info a{
+    color: var(--oliva);
+}
+
+.contact-info-container{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+// --- Mobile --- //
+
+@media (max-width: 768px) {
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-inline: 2em;
+    height: auto;
+  }
+
+  form {
+    max-width: 90%;
+  }
+
+  article {
+    max-width: 100%;
+    flex: 1;
+    max-width: 80%;
+  }
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-text{
+  padding-inline: 1em;
+}
+
+    @include m.from(lg) {
+
+  }
+
+
+
+
+
+  
+

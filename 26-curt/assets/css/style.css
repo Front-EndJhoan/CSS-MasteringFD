@@ -25,7 +25,7 @@ h3 {
   font-style: normal;
 }
 
-h2:not(.hero h2) {
+h2:not(.hero h2, footer h2), .text-curt, a:hover {
   color: var(--curt);
 }
 
@@ -40,9 +40,10 @@ h2 {
   font-size: 1rem;
   text-decoration: underline;
   text-underline-offset: 0.5rem;
+  font-weight: bold;
 }
 
-.inverted {
+.inverted, .inverted:hover {
   color: white !important;
 }
 
@@ -185,35 +186,118 @@ img {
 @media (min-width: 992px) {
   .speaking h2 {
     margin-top: -300px;
-    color: white !important;
+    color: #FFF !important;
   }
 }
-.speaking .wrapper {
+.speaking .event-wrapper {
   position: relative;
   z-index: 9999;
 }
-.speaking .event {
+.speaking .event-wrapper .event {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.21);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  background: rgb(230, 230, 230);
+  background: #F6F7FA;
 }
-.speaking .event time {
-  background: rgb(255, 255, 255);
+.speaking .event-wrapper .event > * {
   padding: 1em;
+}
+.speaking .event-wrapper .event time {
+  background: white;
   border-radius: inherit;
 }
-.speaking .event-month {
+.speaking .event-wrapper .event-month {
   font-family: "Montserrat", sans-serif;
-  color: #03c2d3;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
+  color: var(--curt);
 }
-.speaking-day {
+.speaking .event-wrapper .event-day {
   font-size: 3em;
 }
-.speaking-details h3 {
+
+.resources article {
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.21);
+  border-radius: 0.5rem;
   text-align: center;
+}
+.resources article img {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.testimonial .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2303c2d3'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0'/%3e%3c/svg%3e");
+}
+.testimonial .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2303c2d3'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+}
+.testimonial .carousel-item {
+  background-color: #FFF;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.testimonial .carousel-item blockquote {
+  font-style: italic;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.testimonial .carousel-item blockquote + p::before {
+  content: "- ";
+}
+
+footer {
+  background: #f2f2f2;
+  font-weight: 600;
+}
+footer .menu a {
+  display: block;
+  padding: 0.5em 1em;
+}
+footer svg {
+  width: 2em;
+}
+footer button {
+  display: block;
+  background-color: #03c2d3;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+  transition: box-shadow 0.1s ease-in-out;
+  border: 0 none;
+}
+footer button:hover {
+  box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.22);
+}
+footer input {
+  background: transparent;
+  width: 100%;
+  display: block;
+  border: 0 none;
+  border-bottom: 2px var(--curt) solid;
+  padding: 0.25em;
+  /* Firefox */
+  /* Internet Explorer */
+  /* Edge antiguo */
+}
+footer input::placeholder {
+  font-weight: bold;
+  color: var(--curt);
+}
+footer input::-moz-placeholder {
+  color: var(--curt);
+}
+footer input:-ms-input-placeholder {
+  color: var(--curt);
+}
+footer input::-ms-input-placeholder {
+  color: var(--curt);
 }/*# sourceMappingURL=style.css.map */
