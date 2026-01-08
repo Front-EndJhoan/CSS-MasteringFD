@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Carnet de conducir</legend>
+        <input type="radio" name="conducir" id="conducir_0" value="si"><label for="conducir_0">Sí</label>
+        <input type="radio" name="conducir" id="conducir_1" value="no"><label for="conducir_0">No</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Intereses</legend>
+            <input type="checkbox" name="interes[]" id="interes_0" value="deportes"><label for="interes_0">Deportes</label>
+            <input type="checkbox" name="interes[]" id="interes_1" value="cine"><label for="interes_1">Cine</label>
+        </fieldset>
+        
+        <section>
+            <form action="#">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" required>
+
+                <label for="lname">Apellidos</label>
+                <input type="text" id="lname" required>
+
+                <label for="password">Contraseña</label>
+                <input type="text" id="password" required>
+
+                <label for="dni">DNI</label>
+                <input type="number" id="dni" required>
+            </form>
+        </section>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" required>
+
+            <label for="lname">Apellidos</label>
+            <input type="text" id="lname" required>
+
+            <label for="password">Contraseña</label>
+            <input type="text" id="password" required>
+        </fieldset>
+</body>
+</html>

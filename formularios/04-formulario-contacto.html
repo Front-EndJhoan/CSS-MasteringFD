@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LcdEkQsAAAAANRUkgpE3mp3xN16BqcO2zJBqvii'> 
+    </script>
+    <script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('6LcdEkQsAAAAANRUkgpE3mp3xN16BqcO2zJBqvii', {action: 'formulario'})
+    .then(function(token) {
+    var recaptchaResponse = document.getElementById('recaptchaResponse');
+    recaptchaResponse.value = token;
+    });});
+</script>
+
+    <style>
+        div {
+  margin-bottom: 10px;
+}
+
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <form action="04-proceso-contacto-phpmailer-recaptcha.php" method="post">
+    
+         
+        <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname">
+        </div>
+           <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+        </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+        
+    <div>
+        <label for="comentarios">Comentarios</label>
+    <textarea name="comentarios" id="comentarios">Valor predeterminado</textarea>
+    </div>
+<div>
+<input type="checkbox" name="privacidad" id="privacidad" required><label for="privacidad">He leído y acepto la <a href="#">política de privacidad</a> del sitio</label>
+</div>
+
+<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+
+   <button>Submit</button>
+
+    </form>
+</body>
+</html>

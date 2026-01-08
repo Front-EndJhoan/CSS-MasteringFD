@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+  margin-bottom: 10px;
+}
+
+input:invalid + span::after {
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  content: "✓";
+  padding-left: 5px;
+}
+    </style>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Datos personales</legend>
+        <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" autofocus accesskey="f">
+        </div>
+           <div>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" accesskey="l">
+        </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+         <div>
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="18" max="119" step="6" placeholder="18">
+        </div>
+      <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+    <div>
+        <label for="fotoPerfil">Foto de perfil</label>
+        <input type="file" id="fotoPerfil" name="fotoPerfil">
+    </div>
+
+    <div>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" id="provincia" required>
+            <option value="">--Selecciona provincia--</option>
+            <option value="1">Álava</option>
+            <option value="2">Ávila</option>
+            <option value="50" selected>Zaragoza</option>
+        </select>
+    </div>
+
+<fieldset>
+    <legend>Intereses</legend>
+
+ <div>
+    
+        <label for="lenguajes">¿Qué lenguajes de programación conoces?</label>
+        <select name="lenguajes" id="lenguajes" required multiple size="5">
+            <option>Javascript</option>
+            <option>Python</option>
+            <option>Typescript</option>
+            <option>PHP</option>
+            <option>ASP</option>
+        </select>
+        <p>Para seleccionar más de un lenguaje Ctrl + Click</p>
+    </div>
+
+    <div>
+        <label for="cursos">Cursos disponibles</label>
+        <select name="cursos" id="cursos">
+            <option value="">--Selecciona curso--</option>
+            <optgroup label="Frontend Web">
+            <option>WordPress</option>
+            <option>CSS3</option>
+            <option>HTML5</option>
+            </optgroup>
+            <optgroup label="Diseño gráfico">
+            <option>Photoshop</option>
+            <option>InDesign</option>
+            </optgroup>
+            <optgroup label="Marketing Online">
+            <option>RRSS</option>
+            <option>SEO</option>
+              </optgroup>
+              <optgroup label="Backend Web">
+            <option>PHP</option>
+            </optgroup>
+        </select>
+    </div>
+
+        <label for="ticketNum">Número de ticket</label>
+        <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
+
+
+<datalist id="defaultNumbers">
+  <option value="10045678"></option>
+  <option value="103421"></option>
+  <option value="11111111"></option>
+  <option value="12345678"></option>
+  <option value="12999922"></option>
+</datalist>
+<div>
+    <label for="balloons">Number of balloons to order (multiples of 10):</label>
+    <input
+      id="balloons"
+      type="number"
+      name="balloons"
+      step="10"
+      min="0"
+      max="100"
+      >
+    <span class="validity"></span>
+  </div>
+  </fieldset>
+  <div>
+  <label for="fechaNacimiento">Fecha de nacimiento</label>
+  <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+  </div>
+  <fieldset>
+  <legend>Elige tu método de contacto preferido</legend>
+<div><input type="radio" id="cEmail" name="cMetodo" value="Email" required><label for="cEmail">Email</label></div>
+
+<div><input type="radio" id="cPhone" name="cMetodo" value="Phone"><label for="cPhone">Phone</label></div>
+<div><input type="radio" id="cPostal" name="cMetodo" value="Correo postal"><label for="cPostal">Correo postal</label></div>
+</fieldset>
+<fieldset>
+    <legend>Elige tus intereses</legend>
+    <div>
+        <input type="checkbox" id="programacion" name="programacion"><label for="programacion">Programación</label>
+    </div>
+      <div>
+        <input type="checkbox" id="musica" name="musica"><label for="musica">Música</label>
+    </div>
+      <div>
+        <input type="checkbox" id="cine" name="cine"><label for="cine">Cine</label>
+    </div>
+</fieldset>
+<div>
+    <label for="comentarios">Comentarios</label>
+<textarea name="comentarios" id="comentarios">Valor predeterminado</textarea>
+</div>
+
+<!-- <fieldset>
+    <legend>Elige tus intereses</legend>
+    <div>
+        <input type="checkbox" id="programacion" name="intereses[]" value="programacion"><label for="programacion">Programación</label>
+    </div>
+      <div>
+        <input type="checkbox" id="musica" name="intereses[]" value="musica"><label for="musica">Música</label>
+    </div>
+      <div>
+        <input type="checkbox" id="cine" name="intereses[]" value="cine"><label for="cine">Cine</label>
+    </div>
+</fieldset> -->
+    </fieldset>
+<input type="checkbox" name="privacidad" id="privacidad" required><label for="privacidad">He leído y acepto la <a href="#">política de privacidad</a> del sitio</label>
+
+        <input type="submit">
+        <!-- <button>Submit</button> -->
+
+
+
+    </form>
+</body>
+</html>
