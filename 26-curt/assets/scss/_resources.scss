@@ -1,0 +1,18 @@
+@use "mixins" as m;
+
+.resources {
+ article{
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.21);
+    border-radius: .5rem;
+    text-align: center;
+    img{
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+
+    }
+ }
+}
+
+//   @include m.from(xl) {
+
+//   }

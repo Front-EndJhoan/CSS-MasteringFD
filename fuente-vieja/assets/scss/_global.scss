@@ -1,0 +1,52 @@
+:root{
+  --oliva:hsl(93, 15%, 38%); 
+  --background-beige: hsl(42, 39%, 94%);
+  --background-white:hsl(0, 0%, 100%);
+  --background-footer: hsl(87, 12%, 29%);
+  --white: #fff;
+
+}
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  a{
+    text-decoration: none;
+    font-family: "Judson", serif;
+  }
+  
+  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  input, label, textarea *{
+    font-family: "Judson", serif; 
+  }
+
+  p *{
+    font-family: "Raleway", sans-serif; 
+  }
+
+  .judson-regular {
+    font-family: "Judson", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .judson-bold {
+    font-family: "Judson", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }  

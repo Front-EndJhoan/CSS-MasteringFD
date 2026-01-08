@@ -22,7 +22,7 @@ h3 {
   font-weight: 800;
   font-style: normal;
 }
-h2:not(.hero h2){
+h2:not(.hero h2, footer h2), .text-curt, a:hover{
    color: var(--curt);
 }
 h2{
@@ -36,8 +36,9 @@ h2{
   font-size: 1rem;
   text-decoration: underline;
   text-underline-offset: .5rem;
+  font-weight: bold;
 }
-.inverted {
+.inverted, .inverted:hover {
   color: white!important;
 }
 
