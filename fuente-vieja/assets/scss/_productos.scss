@@ -83,22 +83,23 @@ h2{
   
 }
 
-@media (max-width: 576px) {
-  .carousel-control-prev{
-  top: 250px !important;
-}  
+// // @media (min-width: 576px) {
+// //   .carousel-control-prev{
+// //   top: 180px !important;
+// // }  
 
-.carousel-control-next{
-  top: 250px !important;
-}
+// // .carousel-control-next{
+// //   top: 180px !important;
+// // }
 
-// .slide-text p{
-//   max-width: 75%;
-//   text-align: center;
-// }
+
+// // .slide-text p{
+// //   max-width: 75%;
+// //   text-align: center;
+// // }
   
 
-  }
+//   }
   
 @include m.from(sm) {
   

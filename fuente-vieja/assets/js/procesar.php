@@ -1,32 +1,46 @@
 <?php
+
 $secretKey = "6Lcz2kcsAAAAAK-TfCFkcERAzA8_BiefehFVcrJf";
 
-$responseKey = $_POST['recaptcharesponse'];
+
+if (!isset($_POST['recaptcha_response'])) {
+    die("Error: token de captcha no enviado");
+}
+
+$token = $_POST['recaptcha_response'];
 $userIP = $_SERVER['REMOTE_ADDR'];
+
 
 $url = "https://www.google.com/recaptcha/api/siteverify";
 $data = [
-    'secret' => $secretKey,
-    'response' => $responseKey,
+    'secret'   => $secretKey,
+    'response' => $token,
     'remoteip' => $userIP
 ];
 
 $options = [
     'http' => [
-        'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method' => 'POST',
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
         'content' => http_build_query($data),
     ],
 ];
 
-$context = stream_context_create($options);
-$verify = file_get_contents($url, false, $context);
-$response = json_decode($verify);
+$context  = stream_context_create($options);
+$verify   = file_get_contents($url, false, $context);
+$result   = json_decode($verify);
 
-if ($response->success) {
+
+if (
+    $result->success == true &&
+    $result->score >= 0.5 &&
+    $result->action == 'submit'
+) {
     echo "Formulario enviado correctamente";
-    // aquí procesas el formulario
+    // Procesar formulario
 } else {
-    echo "Captcha inválido. Intenta de nuevo.";
+    echo "Captcha sospechoso o inválido";
 }
-?>
+
+
+

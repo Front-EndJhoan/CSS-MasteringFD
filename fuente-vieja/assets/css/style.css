@@ -73,14 +73,6 @@ h2 {
     right: 5px !important;
   }
 }
-@media (max-width: 576px) {
-  .carousel-control-prev {
-    top: 250px !important;
-  }
-  .carousel-control-next {
-    top: 250px !important;
-  }
-}
 .section-white {
   scroll-margin-top: 3em;
   min-height: 100vh;
@@ -199,6 +191,7 @@ h2 {
 .hero .btn-primary {
   background-color: var(--oliva);
   color: var(--white);
+  border-color: var(--oliva);
 }
 .hero .btn-secondary {
   color: var(--white);
@@ -443,6 +436,7 @@ ol, ul {
 
 .btn-15 {
   background: var(--oliva);
+  color: white;
   border: none;
   z-index: 1;
 }
@@ -461,7 +455,7 @@ ol, ul {
   transition: all 0.3s;
 }
 
-.btn-15 a:hover {
+.btn-15:hover {
   color: var(--oliva);
 }
 

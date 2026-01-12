@@ -10,7 +10,7 @@
     </script>
     <script>
     grecaptcha.ready(function() {
-    grecaptcha.execute('6Lcz2kcsAAAAAKFjuOGVsdz70mrKXzXMYfHSA8_r', {action: 'procesar.php'})
+    grecaptcha.execute('6Lcz2kcsAAAAAKFjuOGVsdz70mrKXzXMYfHSA8_r', {action: 'submit'})
     .then(function(token) {
     var recaptchaResponse = document.getElementById('recaptchaResponse');
     recaptchaResponse.value = token;
@@ -157,7 +157,7 @@
           <div class="slide-text">
             <h3 class="judson-regular">Aceite de Oliva</h3>
             <p>
-              El <em>AOVE Fuente Vieja</em> se obtiene de aceitunas seleccionadas y prensadas en frío para conservar su aroma y propiedades naturales, pruébalo ahora.
+              Se obtiene de aceitunas seleccionadas y prensadas en frío para conservar su aroma y propiedades naturales, pruébalo ahora.
             </p>
           </div>
 
@@ -174,7 +174,7 @@
           <div class="slide-text md">
             <h3 class="judson-regular">Caviar de Olivo</h3>
             <p>
-             El <em>caviar de olivo Fuente Vieja</em> ofrece una experiencia gastronómica única, pequeñas perlas de sabor intenso y textura delicada, ideal para platos gourmet.
+             Ofrece una experiencia gastronómica única, pequeñas perlas de sabor intenso y textura delicada, ideal para platos gourmet.
             </p>
           </div>
 
@@ -191,7 +191,7 @@
           <div class="slide-text">
             <h3 class="judson-regular">Dulce de Olivo</h3>
             <p>
-             El <em>dulce de olivo Fuente Vieja</em> es una combinación que transforma la aceituna en un bocado suave y equilibrado. Destaca por su sabor original y afrutado.
+             Es una combinación que transforma la aceituna en un bocado suave y equilibrado. Destaca por su sabor original y afrutado.
             </p>
           </div>
 
@@ -241,7 +241,7 @@
 <section id="Contacto" class="contact">
   <div class="contact-text pt-3">
   <h2 class="judson-regular">¿Listo para Probar la Excelencia?</h2>
-  <p>Contacta con nosotros o realiza tu pedido. Envío gratis en pedidos superiores a 50€.</p>
+  <p>Contacta con nosotros o realiza tu pedido. Envío gratis en pedidos superiores a 50<sup>€</sup>.</p>
   </div>
 
   <div class="d-flex contact-flex">
@@ -307,7 +307,7 @@
   </form>
   </div>
   <div class="d-flex justify-content-center mb-2">
-    <button class="custom-btn btn-15">Enviar</button>
+    <button type="submit" class="custom-btn btn-15">Enviar</button>
   </div>
 </div>
 

@@ -66,6 +66,7 @@
 
 .btn-15 {
   background: var(--oliva);
+  color: white;
   border: none;
   z-index: 1;
 }
@@ -79,10 +80,10 @@
   z-index: -1;
   background-color: hsl(42, 39%, 94%);
   border-radius: 5px;
-   box-shadow: var(--oliva);
+  box-shadow: var(--oliva);
   transition: all 0.3s;
 }
-.btn-15 a:hover {
+.btn-15:hover {
   color: var(--oliva);
 }
 .btn-15:hover:after {
