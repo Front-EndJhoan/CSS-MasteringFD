@@ -5,7 +5,7 @@
    
     overflow: hidden;
         video {
-        width: 100%;
+        width: 100vw;
         object-fit: cover;
         height: 100vh;
         display: block;
@@ -29,6 +29,11 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        .hero h1 {
+            font-size: var(--fs-h1);
+            font-weight: var(--fw-regular);
+          } 
+    
 
         }
         .hero-logo {
@@ -36,21 +41,12 @@
         margin: 0 auto 1.5rem;
         filter: brightness(0) invert(1); 
         }
-        .hero-content h1{
-        font-family: "Fredericka the Great", sans-serif;
-       letter-spacing: 2px;
-       }
-
-        .hero-title {
-        margin-bottom: 1.5rem;
-        font-size: 4rem;
-        }
     
         .hero-subtitle {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.5rem;
+        font-size: var(--fs-p-a);
        }
        .btn {
         border-radius: 0.5rem;
