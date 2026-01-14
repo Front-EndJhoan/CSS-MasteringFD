@@ -120,3 +120,10 @@ footer input::placeholder {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
+
+/* --- Mobile --*/
+@media (max-width: 576px){
+  .newsletter{
+    flex-direction: column !important;
+  }
+}
