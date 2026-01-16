@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Botones día de la semana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  </head>
+  <body>
+  <div class="container text-center">
+    <div class="result d-md-flex justify-content-between">
+       
+    </div>
+    
+  </div>
+  
+  <script>
+  const zonas = ['Portalet', 'Anayet', 'Garmet', 'Pico Royo', 'Petrosos', 'Sabocos'];
+  const webcams = ['portalet', 'anayet', 'garmet', 'pico-royo', 'petrosos', 'sabocos'];
+
+  const result = document.querySelector('.result');
+  const container = document.querySelector('.container');
+  const buttons = [];
+
+  let currentVideo = null;
+
+  function video(fileName){
+    if (currentVideo) currentVideo.remove();
+
+
+  currentVideo = document.createElement('video');
+  currentVideo.controls = true;
+  currentVideo.autoplay = true;
+  currentVideo.muted = true;
+  currentVideo.playsInline = true;
+  currentVideo.classList.add('ratio', 'ratio-16x9', 'mt-5');
+  container.appendChild(currentVideo);
+  const source = document.createElement('source');
+  source.setAttribute('src', `${fileName}.mp4`);
+  currentVideo.appendChild(source);
+}
+
+zonas.forEach((zona, index) => {
+    const button = document.createElement('button');
+    if(index === 0){
+      button.classList.add('btn-warning');
+    }
+    button.classList.add('btn', 'btn-secondary');
+    button.textContent = zona;
+    result.appendChild(button);
+    buttons.push(button);
+    if (index === zonas.length - 1){
+      video(webcams[0]);
+    }
+
+    button.addEventListener('click', (evento)=>{
+      buttons.forEach((elemento) => elemento.classList.remove('btn-warning'));
+      evento.target.classList.add('btn-warning');
+      video(webcams[index]);    
+    })
+
+  })
+     
+
+  </script>
+  </body>
+</html>
